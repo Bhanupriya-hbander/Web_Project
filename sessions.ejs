@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Teacher Sessions</title>
+</head>
+<body>
+    <h2>Welcome, <%= teacher.username %></h2>
+    <ul>
+        <% sessions.forEach(session => { %>
+            <li><a href="/attendance/<%= session.id %>"><%= session.name %></a></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
